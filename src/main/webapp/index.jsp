@@ -1,3 +1,4 @@
+<%@page import="java.text.SimpleDateFormat"%>
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
 <!DOCTYPE html>
@@ -7,6 +8,35 @@
 <title>Insert title here</title>
 </head>
 <body>
-JSP
+<!-- DECLARATION -->
+	<%!boolean formatar = true; %>
+	
+	<%!
+		String today(){
+			java.text.SimpleDateFormat dt = new SimpleDateFormat("yyyy-mm-dd hh:mm:ss");
+			return dt.format(new java.util.Date());
+		}
+	%>
+	
+	<!-- EXPRESSION -->
+	<h1>A data de hoje é: <%=new java.util.Date() %></h1>
+	<h1>A data de hoje é: <%=today() %></h1>
+	
+	<!-- SCRIPTLET -->
+	<h1>A data de hoje é: <% if (formatar){
+								out.println(today());
+							 }else{
+								 out.println(new java.util.Date());
+						   }%></h1>
+
+
+
+<!-- PARTE 2 -->
+
+
+
+
+
+
 </body>
 </html>
