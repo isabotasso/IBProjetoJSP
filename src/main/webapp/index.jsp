@@ -57,7 +57,23 @@
 
 	<!-- PARTE 3 -->
 
-	
+	<!-- DECLARATION -->
+		<%! Calendar cal = Calendar.getInstance();%>
+		
+		<%!int segundos(){
+			return cal.get(Calendar.SECOND);
+		}%>
+		
+		<%!String par = "par";%>
+		<%!String impar = "impar";%>
+
+		<%if(segundos() % 2 == 0){
+			out.println(par);
+		}else{
+			out.println(impar);
+		}%>
+
+		<h1>São <%=segundos()%> segundos</h1>
     
    
 
