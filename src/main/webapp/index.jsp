@@ -73,7 +73,7 @@
 			out.println(impar);
 		}%>
 
-		<h1>São <%=segundos()%> segundos</h1>
+		<h1>São <%=segundos()%> segundos</h1> 
     
    
 
